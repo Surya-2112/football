@@ -1,12 +1,8 @@
+package footBall;
 import java.util.ArrayList;
 import java.util.List;
 
-enum Statuses{
-    NOT_PLAYED,
-    PLAYING,
-    COMPLETED,
-    POSTPONED
-}
+
 class Match{
     private int matchNumber;
     private String matchStartDate;
@@ -25,6 +21,7 @@ class Match{
         this.status=Statuses.NOT_PLAYED;
         this.team1Score=0;
         this.team2Score=0;
+        this.matchNumber=0;
         scores=new ArrayList<>();
     }
     public int getMatchNumber() {
@@ -102,12 +99,17 @@ class Match{
     public Statuses getStatus() {
         return status;
     }
-
-    public void setStatus(Statuses status) {
-        this.status = status;
-        if(status.equals("COMPLETED"))
-        {
-
-        }
+    
+    public String getMatchDetails()
+    {
+    	return toString();
     }
+	@Override
+	public String toString() {
+		return "Match [matchNumber=" + matchNumber + ", matchStartDate=" + matchStartDate + ", matchEndDate="
+				+ matchEndDate + ", matchStartTime=" + matchStartTime + ", matchEndTime=" + matchEndTime + ", team1="
+				+ team1 + ", team2=" + team2 + ", team1Score=" + team1Score + ", team2Score=" + team2Score + ", status="
+				+ status + ", scores=" + scores + "]";
+	}
+    
 }

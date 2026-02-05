@@ -1,3 +1,5 @@
+package footBall;
+
 
 class Player extends Human {
     
@@ -19,12 +21,13 @@ class Player extends Human {
         this.jerseyNumber = jerseyNumber;
     }
 
-    public Positions getPosition() {
-        return position;
+    public String getPosition() {
+        return position.toString();
     }
 
     public void setPosition(String position) {
-       
+       position=position.toUpperCase().trim();
+       this.position=Positions.valueOf(position);
     }
 
     public int getScores() {
@@ -43,4 +46,11 @@ class Player extends Human {
         this.matchPlayed = matchPlayed;
     }
 
+	@Override
+	public String toString() {
+		return "Player ["+"jerseyNumber=" + jerseyNumber + ", position=" + position + ", scores=" + scores
+				+ ", matchPlayed=" + matchPlayed + "]";
+	}
+
+    
 }

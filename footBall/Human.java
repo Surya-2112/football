@@ -1,3 +1,4 @@
+package footBall;
 class Human{
     private String name;
     private int  age;
@@ -29,11 +30,11 @@ class Human{
         this.mobileNumber = mobileNumber;
     }
 
-    public String geteMail() {
+    public String getEMail() {
         return eMail;
     }
 
-    public void seteMail(String eMail) {
+    public void setEMail(String eMail) {
         this.eMail = eMail;
     }
 

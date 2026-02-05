@@ -1,3 +1,4 @@
+package footBall;
 
 enum Positions{
     ST,

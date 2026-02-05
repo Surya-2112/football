@@ -1,3 +1,4 @@
+package footBall;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -156,4 +157,20 @@ public class Team{
     public void setGoalDifferent(int goalDifferent) {
         this.goalDifferent = goalDifferent;
     }
+
+	@Override
+	public String toString() {
+		return "Team [name=" + name + ", MatchPlayed=" + MatchPlayed + ", scored=" + scored + ", wins=" + wins
+				+ ", loss=" + loss + ", draws=" + draws + ", goalDifferent=" + goalDifferent +", Players List"+ 
+				getPlayersList() + ", SupportStaff List"+ getSupportStaffsList() +"]";
+	}
+    
+	public String getPlayersList() {
+		return players.toString();
+	}
+	
+	public String getSupportStaffsList() {
+		return players.toString();
+	}
+	
 }
