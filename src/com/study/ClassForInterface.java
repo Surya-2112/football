@@ -6,7 +6,7 @@ public class ClassForInterface {
 		final int c=300;
 		static final int d=400;
 		
-		public void show1()
+	    public void show1()
 		{
 			System.out.println(a+" "+b+" "+c+" "+d);
 		}
@@ -14,4 +14,8 @@ public class ClassForInterface {
 		 {
 			 System.out.println(" "+b+" "+" "+d);
 		 }
+		public void show3()
+		{
+			System.out.println("It show3");
+		}
 }
