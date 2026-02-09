@@ -1,6 +1,6 @@
 package com.footBall;
 
-class SupportStaff extends Human{
+public class SupportStaff extends Human{
     private String  Role;
 
     public String getRole() {

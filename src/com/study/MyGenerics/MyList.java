@@ -1,0 +1,80 @@
+package com.study.MyGenerics;
+
+import java.util.Arrays;
+
+public class MyList<K> {
+
+	K k;
+	private static int size = 10;
+	private int NumberOfValue = 0;
+	public K array[];
+
+	public MyList() {
+		this.array = (K[]) new Object[size];
+	}
+
+	public void add(K k) {
+		if (NumberOfValue == size) {
+			AddSize();
+		}
+		array[NumberOfValue++] = k;
+	}
+
+	public void remove(K k) {
+		boolean flag = false;
+		if (isEmpty()) {
+			System.out.println("MYList is Empty");
+		}
+		int j = 0;
+		for (int i = 0; i < NumberOfValue; i++) {
+			if (array[i].equals(k)) {
+				flag = true;
+				continue;
+			}
+			if (flag) {
+				array[j] = array[i];
+			}
+			j++;
+		}
+	}
+	public void remove(int index)
+	{
+		if (isEmpty()) {
+			System.out.println("MYList is Empty");
+		}
+		if(index>=NumberOfValue)
+		{
+			System.out.println("IndexOutOfBound");
+		}
+		for (int i = index; i < NumberOfValue; i++) {
+			array[i]=array[i+1];
+		}
+	}
+	public void AddSize() {
+		size += 10;
+		K newArray[] = (K[]) new Object[size];
+		newArray=Arrays.copyOf(array, size);
+		array = (K[]) newArray;
+		//System.out.println(newArray.length + " " + array.length+" "+size);
+	}
+
+	public boolean isEmpty() {
+		if (NumberOfValue == 0)
+			return true;
+		return false;
+	}
+
+	public int size() {
+		return NumberOfValue;
+	}
+	
+	public K get(int index)
+	{
+		if(index<NumberOfValue)
+		{
+			return array[index];
+		}
+		System.out.println("ArrayIndexOutOfBound");
+		return null;
+	}
+}

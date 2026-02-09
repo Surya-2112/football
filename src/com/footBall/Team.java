@@ -20,7 +20,7 @@ public class Team{
         this.supportStaffs=new ArrayList<>();
         this. MatchPlayed=0;
         this. scored=0;
-        this. wins=0;
+        this. wins=0; 
         this. loss=0;
         this. draws=0;
         this.goalDifferent=0;

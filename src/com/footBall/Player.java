@@ -1,7 +1,7 @@
 package com.footBall;
 
 
-class Player extends Human {
+public class Player extends Human {
     
    private  int jerseyNumber;
    private Positions position;
