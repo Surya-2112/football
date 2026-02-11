@@ -35,6 +35,7 @@ public class MyList<K> {
 			}
 			j++;
 		}
+		NumberOfValue=j;
 	}
 
 	public void remove(int index) {
@@ -47,6 +48,7 @@ public class MyList<K> {
 		for (int i = index; i < NumberOfValue; i++) {
 			array[i] = array[i + 1];
 		}
+		NumberOfValue--;
 	}
 
 	private void AddSize() {
@@ -78,5 +80,17 @@ public class MyList<K> {
 	public static <K> boolean compare(K a, K b) // when we use static method we add Generic type before return type
 	{
 		return a.equals(b);
+	}
+	
+	public void set(int index,K k)
+	{
+		if (NumberOfValue == size) {
+			AddSize();
+		}
+		for(int i=NumberOfValue ;i>index;i--)
+		{
+			array[i]=array[i-1];
+		}
+		array[index]=k;
 	}
 }

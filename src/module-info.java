@@ -10,4 +10,5 @@ module FootBallTournament {
 	requires jdk.jfr;
 	requires java.desktop;
 	requires java.xml;
+	requires java.base;
 }
