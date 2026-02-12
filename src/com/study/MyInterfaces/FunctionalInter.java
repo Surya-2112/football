@@ -1,4 +1,4 @@
-package com.study.MyInterfaces;
+package com.study.myinterfaces;
 
 @FunctionalInterface
 public interface FunctionalInter {

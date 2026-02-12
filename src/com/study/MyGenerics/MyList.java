@@ -1,4 +1,4 @@
-package com.study.MyGenerics;
+package com.study.mygenerics;
 
 import java.util.Arrays;
 

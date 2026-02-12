@@ -1,4 +1,4 @@
-package com.study.MyInterfaces;
+package com.study.myinterfaces;
 
 public class ClassForInterface {
 	    int a=100;

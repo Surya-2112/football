@@ -1,1 +1,1 @@
-package com.study.MyHashing;
+package com.study.myhashing;

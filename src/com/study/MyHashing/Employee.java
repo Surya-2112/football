@@ -1,4 +1,4 @@
-package com.study.MyHashing;
+package com.study.myhashing;
 
 public class Employee {
 	public int id;

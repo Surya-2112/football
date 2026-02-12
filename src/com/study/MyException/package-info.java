@@ -1,1 +1,1 @@
-package com.study.MyException;
+package com.study.myexception;

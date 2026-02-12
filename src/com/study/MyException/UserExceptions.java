@@ -1,4 +1,4 @@
-package com.study.MyException;
+package com.study.myexception;
 
 public class UserExceptions extends Exception {
 

@@ -1,1 +1,1 @@
-package com.study.MyInterfaces;
+package com.study.myinterfaces;

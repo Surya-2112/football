@@ -1,4 +1,4 @@
-package com.study.MyAnnotations;
+package com.study.myannotations;
 
 import java.lang.annotation.*;
 

@@ -1,4 +1,4 @@
-package com.study.MyException;
+package com.study.myexception;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -9,7 +9,7 @@ import java.lang.System.Logger;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import com.study.MyGenerics.MyList;
+import com.study.mygenerics.MyList;
 
 public class Main {
 

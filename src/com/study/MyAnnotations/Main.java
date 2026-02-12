@@ -1,8 +1,8 @@
-package com.study.MyAnnotations;
+package com.study.myannotations;
 
 import java.util.function.Predicate;
 
-import com.study.MyInterfaces.FunctionalInter;
+import com.study.myinterfaces.FunctionalInter;
 
 public class Main {
 	public static void main(String args[])
