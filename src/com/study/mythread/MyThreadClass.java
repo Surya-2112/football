@@ -4,7 +4,7 @@ public class MyThreadClass extends Thread{
 
 	public void run() {
 		for (int i = 0; i < 10; i++) {
-			System.out.println(i + "This is the Thread from MyThreadClass  " + this.getName());
+			System.out.println(i + "This is the Thread from MyThreadClass  " + Thread.currentThread().getName());
 			try {
 			Thread.sleep(4000);
 			}catch(Exception e)
