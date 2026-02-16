@@ -1,4 +1,4 @@
-package com.study.myinterfaces;
+package com.study.myinterface;
 
 public class InterfaceClass extends ClassForInterface implements Sample1Interface,Sample2Innterface{
 

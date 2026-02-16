@@ -1,4 +1,4 @@
-package com.study.myexception;
+package com.study.myexceptions;
 
 public class MidClass extends ClassForThrows {
 

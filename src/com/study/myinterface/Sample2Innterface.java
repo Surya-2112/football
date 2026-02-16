@@ -1,4 +1,4 @@
-package com.study.myinterfaces;
+package com.study.myinterface;
 
 interface Sample2Innterface {
 	    int a=1;

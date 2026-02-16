@@ -1,4 +1,4 @@
-package com.study.myclass;
+package com.study.myclasses;
 
 public abstract class AbstractClass {
 	// it as construtor and we cannot create a object for the class

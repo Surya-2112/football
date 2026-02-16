@@ -1,6 +1,6 @@
-package com.study.myclass;
+package com.study.myclasses;
 
-import com.study.myinterfaces.NestedInterface;
+import com.study.myinterface.NestedInterface;
 
 public class ChildForNested extends NestedOuterClass implements NestedInterface{
 	 

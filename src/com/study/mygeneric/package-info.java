@@ -1,1 +1,1 @@
-package com.study.mygenerics;
+package com.study.mygeneric;

@@ -1,4 +1,4 @@
-package com.study.myinterfaces;
+package com.study.myinterface;
 
 public interface NestedInterface {
 	interface InnerInterface //All interfaces declared inside another interface are implicitly public static abstract

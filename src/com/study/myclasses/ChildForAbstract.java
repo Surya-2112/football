@@ -1,4 +1,4 @@
-package com.study.myclass;
+package com.study.myclasses;
 
 public class ChildForAbstract extends AbstractClass.InnerAbstractClass {
 	//we can extends the InnerAbstractclass when it was static else we need a object for outer class and with that object only exends the class

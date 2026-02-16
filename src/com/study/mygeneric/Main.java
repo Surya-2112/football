@@ -1,4 +1,4 @@
-package com.study.mygenerics;
+package com.study.mygeneric;
 
 import com.footBall.Player;
 

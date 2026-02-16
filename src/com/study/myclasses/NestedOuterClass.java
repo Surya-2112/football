@@ -1,4 +1,4 @@
-package com.study.myclass;
+package com.study.myclasses;
 
 public class  NestedOuterClass  {
 	

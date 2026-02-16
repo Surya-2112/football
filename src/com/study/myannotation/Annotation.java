@@ -1,4 +1,4 @@
-package com.study.myannotations;
+package com.study.myannotation;
 
 import java.util.ArrayList;
 import java.util.List;
