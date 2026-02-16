@@ -39,13 +39,50 @@ public class Main {
 		inr.start();
 		der.start(); */
 		
-		for(int i=0;i<5;i++)
+	/*	for(int i=0;i<5;i++)
 		{
 			IncrementRun inr=new IncrementRun();
 			DecrementRun der=new DecrementRun();
 			inr.start();
 			der.start();
-		}
+		}*/
 		
-	}
+	
+		Count2 count=new Count2();
+		Thread t=new Thread(()->{
+		for(int i=0;i<1000;i++)
+		{
+			count.increment();
+		}});
+		Thread tt=new Thread(()->{
+			for(int i=0;i<1000;i++)
+			{
+				count.decrement();
+			}});
+		
+		t.start();
+		tt.start();
+		t.join();
+		tt.join();
+		System.out.println(count.count); 
+		
+		Count count1=new Count();
+		Thread t1=new Thread(()->{
+		for(int i=0;i<1000;i++)
+		{
+			count.increment();
+		}});
+		Thread tt1=new Thread(()->{
+			for(int i=0;i<1000;i++)
+			{
+				count.decrement();
+			}});
+		
+		t1.start();
+		tt1.start();
+		t1.join();
+		tt1.join();
+		System.out.println(count1.count);
+		
+	}  
 }
