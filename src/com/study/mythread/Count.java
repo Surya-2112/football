@@ -10,6 +10,7 @@ public class Count {
 			System.out.println(count + " " + Thread.currentThread().getName());
 		}*/
 		count++;
+		System.out.println("Increments Sync = "+count + " " + Thread.currentThread().getName());
 	}
 
 	public  void decrement() {

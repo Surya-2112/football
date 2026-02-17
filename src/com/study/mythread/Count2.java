@@ -10,7 +10,7 @@ public class Count2 {
 			System.out.println(count + " " + Thread.currentThread().getName());
 		}*/
 		count++;
-
+		System.out.println("Increments = "+count + " " + Thread.currentThread().getName());
 	}
 
 	public void decrement() {

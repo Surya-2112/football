@@ -1,5 +1,7 @@
 package com.study.mythread;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class WaitMain {
@@ -33,5 +35,7 @@ public class WaitMain {
 			age=sc.nextInt();
 			w.setAge(age);
 			System.out.println(w.getName()+"  "+w.getAge());
+			
+			
 		}
 }
