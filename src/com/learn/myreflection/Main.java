@@ -64,7 +64,7 @@ public class Main extends BaseClass {
 		methodSetValue(method, field, obj, map);
 	}
 
-	public static void accessPlayer(Map<String, Object> map, Object obj) throws Exception {
+	public static void accessClass(Map<String, Object> map, Object obj) throws Exception {
 		System.out.println(obj.toString());
 		for (Map.Entry pair : map.entrySet()) {
 			Field field = null;
@@ -72,6 +72,7 @@ public class Main extends BaseClass {
 				Class cl=obj.getClass();
 				field = cl.getDeclaredField((String) pair.getKey());
 			} catch (NoSuchFieldException e) {
+				if(!pair.getKey().equals("class"))
 				System.out.println(pair.getKey().toString() + " is not a field of Players class");
 				continue;
 			}
@@ -83,14 +84,21 @@ public class Main extends BaseClass {
 				ByField(field, obj, pair);
 			}
 		}
-		System.out.println(obj.toString());
+		//System.out.println(obj.toString());
+	}
+	
+	public static Object getObject(Map map) throws Exception
+	{
+		Class cl = Class.forName("com.learn.myreflection."+map.get("class"));  
+		Object	obj = cl.getDeclaredConstructor().newInstance();
+		accessClass(map, obj);
+		return obj;
 	}
 
 	public static void main(String[] args) throws Exception {
 
-		JsonToMap jtm = new JsonToMap();
-		Class cl = Class.forName("com.learn.myreflection.Player");  
-		Object	obj = cl.getDeclaredConstructor().newInstance();
+		//JsonToMap jtm = new JsonToMap();
+		Mapper mapp=new Mapper();
 		
 		/*
 		 * String json1 =
@@ -100,9 +108,8 @@ public class Main extends BaseClass {
 		 * String json2 = "{ name : json2, age : 22, jerseyNumber : 3 }"; Map<String,
 		 * Object> map2 = jtm.jsonToMap(json2); accessPlayer(map2, obj);
 		 */
-		String json3 = "{ name : json3, age : 53, jerseyNumber : 4, phoneNumber : 9876543210 }";
-		Map<String, Object> map3 = jtm.jsonToMap(json3);
+		String json3 = "Player { name : json3 , age : 53 , jerseyNumber : 4 , phoneNumber : 9876543210 , Address : { street : MGRoad , city : Chennai , state : TamilNadu , pincode : 600001 } }";
+		Map<String, Object> map3 = mapp.jsonToMap(json3);
 		System.out.println(map3);
-		accessPlayer(map3, obj);
 	}
 }

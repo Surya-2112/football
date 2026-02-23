@@ -33,6 +33,7 @@ public class Player {
 	@JerseyNumber
 	private int jerseyNumber;
 	
+	public Address address;
 	Player()
 	{
 		this.id=genrated;
